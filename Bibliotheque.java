@@ -54,4 +54,25 @@ public class Bibliotheque {
     }
     
 
+
+// FONCTION RESERVATION
+    public Reservation reserverLivre(Lvre livre, Emprunteur emprunteur){
+        if (livre.isDisponible()){
+            System.out.println("livre disponible")
+        return null;
+        }
+        Reservation reservation = new Reservation(livre, emprunteur);
+        reservation.add(reservation);
+        System.out.println("Reservation ajoutr: " + reservation);
+        return reservation;
+    }
+    public ArrayList<Reservation> getReservations(){
+        return reservations;
+    }
+    @Override
+    public String toString(){
+        return "Bibliotheque{"+
+                "livres=" + livres + ", reservations=" + reservations + "}"
+                
+    }
 }
