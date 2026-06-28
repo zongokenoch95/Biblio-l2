@@ -26,6 +26,32 @@ public class Bibliotheque {
         }
     }
 
+    public ArrayList<Livre> rechercherParTitre(String titre){
+        ArrayList<Livre> resultat = new ArrayList<Livre>();
+        for(int i =0; i < livres.size(); i++){
+            Livre l = livres.get(i);
+            if(l.getTitre().equals(titre)){
+                resultat.add(l);
+            }
+        }
+        if(resultat.size() == 0){
+            System.out.println("Aucun livre trouvé avec ce titre.");
+        }
+        return resultat;
+    }
+    public ArrayList<Livre> rechercherParAuteur(String auteur){
+        ArrayList<Livre> res = new ArrayList<Livre>();
+        for(int i = 0; i < livres.size(); i++){
+            if(livres.get(i).getAuteur().equals(auteur)){
+                res.add(livres.get(i));
+            }
+        }
+        if(res.size()==0){
+            System.out.println("Pas de livre.");
+            
+        }
+        return res;
+    }
     
 
 }
