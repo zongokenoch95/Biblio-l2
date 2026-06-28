@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+/**
+ * Commentaire Javadoc ajouté
+ * Sur la Classe Biblioteque
+ */
 public class Bibliotheque {
     private ArrayList<Livre> livres;
     public Bibliotheque() {
